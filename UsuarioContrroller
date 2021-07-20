@@ -1,0 +1,28 @@
+package ikebana.gammaversion
+
+import com.mongodb.DB
+import com.mongodb.DBCollection
+import com.mongodb.MongoClient
+import com.mongodb.client.MongoCollection
+import com.mongodb.client.MongoDatabase
+import grails.gorm.transactions.Transactional
+
+import groovy.sql.Sql
+import org.grails.datastore.mapping.mongo.MongoDatastore
+
+import javax.activation.DataSource
+
+import static org.springframework.http.HttpStatus.CREATED
+
+
+class UsuarioController {
+   
+   def index() {
+       def b = new Usuario(nombre: "Rochi", apellido: "KiSama")
+       System.out.println(b.nombre)
+       b.IkebanaUser.save(flush: true)
+      
+   }
+
+
+}
