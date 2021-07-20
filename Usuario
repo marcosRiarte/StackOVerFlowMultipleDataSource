@@ -1,0 +1,19 @@
+package ikebana.gammaversion
+
+
+class Usuario {
+
+     String nombre
+     String  apellido
+
+    static constraints = {
+        nombre  nullable: true
+        apellido unique: true
+          }
+    static mapping = {
+        datasource 'IkebanaUser'
+        
+   }
+   
+
+}
